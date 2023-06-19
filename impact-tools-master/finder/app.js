@@ -513,3 +513,16 @@ function transformRequest(url) {
     url: isMapboxRequest ? url.replace('?', '?pluginName=finder&') : url,
   };
 }
+
+var modalButtonLeft = document.getElementById('modalButtonLeft')
+var modalButtonRight = document.getElementById('modalButtonRight')
+
+modalButtonLeft.addEventListener('click', () => {
+  modal.classList.remove('right');
+  modal.classList.add('left');
+});
+
+modalButtonRight.addEventListener('click', () => {
+  modal.classList.remove('left');
+  modal.classList.add('right');
+});
